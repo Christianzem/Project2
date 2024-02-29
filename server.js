@@ -3,6 +3,7 @@ const express = require("express")
 const app = express()
 require("./config/database")
 const session = require("express-session")
+const PORT = process.env.PORT
 
 const methodOverride = require("method-override")
 const postRoutes = require("./routes/postsRoutes")
