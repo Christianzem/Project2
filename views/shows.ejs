@@ -8,14 +8,19 @@
 <body>
     <h2><%= post.name.toUpperCase() %></h2>
     <img src="<%= post.img %>"/>
-    <h2><%= post.age %></h2>
-    <p><%= post.description %></p>
+    <h2>Age: <%= post.age %></h2>
+    <p>Description: <%= post.description %></p>
     <% if (post.trained === true) { %>
         <span><%= post.name %> is trained</span>
     <% } else { %>
         <span><%= post.name %> is not trained</span>
     <% } %>
-    <h2><%= post.breed %></h2>
+    <h2>Breed: <%= post.breed %></h2>
+    
+    <a href="/posts/<%= post.id %>/edit">EDIT INFO</a>
+    <form method="POST" action="/posts/<%= post.id %>?_method=DELETE">
+        <input type="submit" value="DELETE"/>
+    </form>
 
     <a href="/posts">Back to Animals</a>
 
