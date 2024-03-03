@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+<%- include("./partials/head.ejs") %>
 <body>
-    <a href="/posts/new">Create a new adoptable animal</a>
-    <h2>Local Adoptable Animals</h2>
-    <ul>
-        <% for (let i=0; i < allPosts.length; i++) { %>
-        <li>
-            <a href="/posts/<%= allPosts[i].id %>">
-                <img src="<%= allPosts[i].img %>"/> 
-                <%= allPosts[i].name %>
-            </a>
-        </li>
-    <% } %>
-    </ul>
+    <div class="index">
+    <%- include("./partials/header.ejs") %>
+    <div class="indexTitle">
+        <h2>Local Adoptable Animals</h2>
+    </div>
+    <div class="container">
+        <div class="cards">
+            <ul>
+                <% for (let i=0; i < allPosts.length; i++) { %>
+                <li>
+                    <a href="/posts/<%= allPosts[i].id %>">
+                        <img src="<%= allPosts[i].img %>"/> 
+                        <%= allPosts[i].name %>
+                    </a>
+                </li>
+            <% } %>
+            </ul>
+        </div>  
+    </div>
+</div>
 </body>
+
 </html>

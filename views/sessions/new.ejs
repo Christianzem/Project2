@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LOGIN</title>
 </head>
 <body>
-    <h1>Login</h1>
+    <%- include ("../partials/header.ejs") %>
+    <h1>LOGIN</h1>
     <form action="/sessions" method="POST">
         Username: <input required type="text" name="username"/><br>
         Password: <input required type="text" name="password"/><br>
