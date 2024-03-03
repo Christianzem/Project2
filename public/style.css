@@ -64,6 +64,10 @@ header {
 .container ul {
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    /* max-width: 80%; */
+    margin: 0 10% 10% 10%;  
 }
 .cards li {
     background-color: #99e6ff;
@@ -80,4 +84,17 @@ header {
     text-decoration: none;
     color:white; 
     font-size: 20px;
+}
+
+.container-show {
+    display: grid; 
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px; 
+}
+
+.img-show {
+    display: grid;
+    justify-self: start;
+    margin: 20px; 
 }

@@ -3,8 +3,11 @@
     <%- include("./partials/head.ejs") %>
 <body>
     <%- include("./partials/header.ejs") %>
+    <div class="container-show">
     <h2><%= post.name.toUpperCase() %></h2>
-    <img src="<%= post.img %>"/>
+    <div class="img-show">
+        <img src="<%= post.img %>"/>
+    </div>
     <h2>Age: <%= post.age %></h2>
     <p>Description: <%= post.description %></p>
     <% if (post.trained === true) { %>
@@ -18,7 +21,8 @@
     <form method="POST" action="/posts/<%= post.id %>?_method=DELETE">
         <input type="submit" value="DELETE"/>
     </form>
-
+    </div>
+ <hr>
     <a href="/posts">Back to Animals</a>
 
 </body>

@@ -25,7 +25,7 @@ const index = async(req,res) => {
     try{
         const Posts = await Post.find()
         res.render("index.ejs", {
-            allPosts: Posts,
+            allPosts: Posts, 
             tabTitle: "Index",
             currentUser: req.session.currentUser
         })
