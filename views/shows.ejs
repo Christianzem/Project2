@@ -4,26 +4,27 @@
 <body>
     <%- include("./partials/header.ejs") %>
     <div class="container-show">
-    <h2><%= post.name.toUpperCase() %></h2>
-    <div class="img-show">
+    <div class="name-show">
+        <h2><%= post.name.toUpperCase() %></h2>
         <img src="<%= post.img %>"/>
     </div>
-    <h2>Age: <%= post.age %></h2>
-    <p>Description: <%= post.description %></p>
-    <% if (post.trained === true) { %>
-        <span><%= post.name %> is trained</span>
-    <% } else { %>
-        <span><%= post.name %> is not trained</span>
-    <% } %>
-    <h2>Breed: <%= post.breed %></h2>
-    
-    <a href="/posts/<%= post.id %>/edit">EDIT INFO</a>
-    <form method="POST" action="/posts/<%= post.id %>?_method=DELETE">
-        <input type="submit" value="DELETE"/>
-    </form>
+    <div class="info-show">
+        <h2>Age: <%= post.age %></h2>
+        <p>Description: <%= post.description %></p>
+        <% if (post.trained === true) { %>
+            <span><%= post.name %> is trained</span>
+        <% } else { %>
+            <span><%= post.name %> is not trained</span>
+        <% } %>
+        <h2>Breed: <%= post.breed %></h2>
+        <button class="edit"><a href="/posts/<%= post.id %>/edit" class="edit">EDIT INFO</a></button>
+        <form method="POST" action="/posts/<%= post.id %>?_method=DELETE">
+            <input type="submit" value="DELETE" class="btn2"/>
+        </form>
+    </div>
     </div>
  <hr>
-    <a href="/posts">Back to Animals</a>
+    <button class="btn-post"><a href="/posts" class="btn-post">Back to Animals</a></button>
 
 </body>
 </html>

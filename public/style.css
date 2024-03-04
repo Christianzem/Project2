@@ -10,7 +10,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%; 
-    background-color: #99e6ff;
+    background-color: blueviolet;
     color: white; 
     box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
 }
@@ -33,6 +33,16 @@ header {
 .nav_list li {
     list-style-type: none;
     padding: 0px 0px 5px 0px; 
+}
+
+.user_links {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.user_links li {
+    margin: 0px 15px 0px 15px; 
 }
 
 .btn {
@@ -70,7 +80,7 @@ header {
     margin: 0 10% 10% 10%;  
 }
 .cards li {
-    background-color: #99e6ff;
+    background-color: blueviolet;
     list-style-type: none;
     height: 500px;
     width: 300px; 
@@ -86,15 +96,147 @@ header {
     font-size: 20px;
 }
 
-.container-show {
+/* .container-show {
     display: grid; 
     justify-content: space-between;
     align-items: center;
     margin: 20px; 
+} */
+
+.container-show {
+    display: grid;
+    grid-template-columns: 500px 800px;
+    grid-gap: 20px; 
 }
 
-.img-show {
+.name-show {
+    grid-column: 1 / 1;
+    margin-left: 20px;
+}
+
+.info-show {
+    grid-column: 2 / 2;
+    padding-top: 80px;
+}
+
+/* .container-new {
     display: grid;
-    justify-self: start;
-    margin: 20px; 
+    grid-template-columns: 500px 500px 500px;
+    grid-auto-rows: 100px, auto;
+    justify-self: center;
+  
+} */
+
+.container-new {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-new {
+    text-align: center;
+    width: 500px;
+    background-color: blueviolet;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
+    padding: 10px;
+    font-size: 20px;
+
+}
+
+.name-new {
+    margin: 4%;
+}
+
+.img-new {
+    margin: 4%; 
+}
+
+.age-new {
+    margin: 4%; 
+}
+
+.des-new {
+    margin: 4%; 
+}
+
+.breed-new {
+    margin: 4%; 
+}
+ input {
+    width: 100%;
+    height: 20px; 
+    border-radius: 5px;
+ }
+
+ .btn1 {
+    width: 50%;
+    height: 30px; 
+    outline-color: rgb(151, 68, 228);
+    color: rgb(151, 68, 228); 
+    border-radius: 10px;
+    border: none; 
+    margin-bottom: 20px;
+ }
+
+ .btn1:hover {
+    background-color: rgb(178, 136, 218);
+    color: white; 
+ }
+
+ .btn2 {
+    width: 30%; 
+    height: 30px; 
+    outline-color: red;
+    color: red; 
+    border-radius: 10px;
+    margin-top: 10px;
+    border: none; 
+ }
+
+ .btn2:hover {
+    background-color: rgb(255, 0, 0);
+    color: white; 
+ }
+
+ .edit {
+    text-decoration: none;
+    width: 30%; 
+    height: 30px; 
+    outline-color:rgb(151, 68, 228);
+    color:rgb(151, 68, 228);
+    border-radius: 10px;
+    margin-bottom: 0px;
+    border: none; 
+ }
+
+.edit:hover{
+    background-color: rgb(151, 68, 228);
+    color:white; 
+}
+
+.btn-post {
+    text-decoration: none;
+    width: 30%;
+    height: 30px;
+    outline-color: rgb(151, 68, 228);
+    color:rgb(151, 68, 228); 
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-left: 30px;
+    border: none; 
+}
+
+.btn-post:hover {
+    background-color: rgb(151, 68, 228);
+    color: white; 
+}
+
+.username {
+    margin: 4%; 
+}
+.password {
+    margin: 4%; 
 }

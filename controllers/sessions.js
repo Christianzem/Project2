@@ -4,6 +4,7 @@ const User = require("../models/user.js")
 
 router.get("/new", (req,res) => {
     res.render("sessions/new.ejs", {
+        tabTitle: "LOGIN",
         currentUser: req.session.currentUser
     })
 })

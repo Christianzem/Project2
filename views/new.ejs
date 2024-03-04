@@ -3,29 +3,49 @@
     <%- include("./partials/head.ejs") %>
 <body>
     <%- include("./partials/header.ejs") %>
-    <h2>Add a new adoptable animal</h2>
+    <div class="container-new">
+    <div class="title-new">
+        <h2>Add a new adoptable animal</h2>
+    </div>
+    <div class="form-new">
     <form action="/posts" method="POST">
-        <label for="name">Name</label>
-        <input type="text" name="name" id="name" placeholder="Please put name of animal"/>
 
-        <label for="img">Image Address</label>
-        <input type="text" name="img" id="img" placeholder="Please put image address"/>
+        <div class="name-new">
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" placeholder="Please put name of animal"/>
+        </div>
+        
+        <div class="img-new">
+            <label for="img">Image Address</label>
+            <input type="text" name="img" id="img" placeholder="Please put image address"/>
+        </div>
 
-        <label for="age">Age</label>
-        <input type="text" name="age" id="age" placeholder="Animal Age"/>
+        <div class="age-new">
+            <label for="age">Age</label>
+            <input type="text" name="age" id="age" placeholder="Animal Age"/>    
+        </div>
 
-        <label for="description">Description</label>
-        <input type="text" name="description" id="description" placeholder="Describe your animal"/>
+        <div class="des-new">
+            <label for="description">Description</label>
+            <input type="text" name="description" id="description" placeholder="Describe your animal"/>            
+        </div>
 
-        <input type="checkbox" name="trained" id="trained"/>
-        <label for="trained">Trained?</label>
+        <div class="trained-new">
+            <label for="trained">Trained?</label>            
+            <input type="checkbox" name="trained" id="trained"/>        
+        </div>
 
-        <label for="breed">Breed</label>
-        <input type="text" name="breed" id="breed" placeholder="type of breed i.e. German Shepard"/>
+        <div class="breed-new">
+            <label for="breed">Breed</label>
+            <input type="text" name="breed" id="breed" placeholder="type of breed i.e. German Shepard"/>            
+        </div>
 
-        <hr>
-        <input type="submit" value="Create new adoption post"/>
+        <br>
+        <input type="submit" value="Create new adoption post" class="btn1"/> 
+
     </form>
+    </div>        
+    </div>
     
 </body>
 </html>
