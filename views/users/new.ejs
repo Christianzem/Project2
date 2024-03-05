@@ -3,11 +3,19 @@
 <%- include("../partials/head.ejs") %>
 <body>
     <%- include ("../partials/header.ejs") %>
+    <div class="container-new">
     <h1>SIGN UP</h1>
+    <div class="form-new">
     <form action="/users" method="POST">
+        <div class="username">
         Username: <input required type="text" name="username"/><br>
+        </div>
+        <div class="password">
         Password: <input required type="text" name="password"/><br>
-        <input type="submit" name="" value="Sign Up"/>
+        </div>
+        <input type="submit" name="" value="Sign Up" class="btn1"/>
     </form>
+    </div>
+    </div>
 </body>
 </html>

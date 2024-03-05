@@ -12,10 +12,11 @@
             <ul>
                 <% for (let i=0; i < allPosts.length; i++) { %>
                 <li>
-                    <a href="/posts/<%= allPosts[i].id %>">
+                    <!-- <a href="/posts/<%= allPosts[i].id %>"> -->
                         <img src="<%= allPosts[i].img %>"/> 
-                        <%= allPosts[i].name %>
-                    </a>
+                        <h3><%= allPosts[i].name.toUpperCase() %></h3>
+                    <!-- </a> -->
+                    <button class="learnMore"><a href="/posts/<%= allPosts[i].id %>" class="learnMore">LEARN MORE</a></button>
                 </li>
             <% } %>
             </ul>
