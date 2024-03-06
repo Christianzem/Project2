@@ -29,10 +29,8 @@
         </div>
 
         <div class="trained-new">
-            <input type="checkbox" name="trained" id="trained" /> 
-                <!-- <% if(post.trained === true) { %>
-                  <%= post.trained %>
-                <% } %>  -->
+            <input type="checkbox" name="trained" id="trained" <% if(post.trained){ %> checked <% } %> /> 
+
     
             <label for="trained">Trained?</label>            
         </div>

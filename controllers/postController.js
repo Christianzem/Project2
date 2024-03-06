@@ -59,7 +59,7 @@ const destory = async(req,res) => {
 
 const edit = async(req,res) => {
     try{
-        const post = await Post.findById(req.params.id)
+        const post = await Post.findById(req.params.id);
         res.render("edit.ejs", {
             post,
             index: req.params.id,
