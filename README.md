@@ -10,9 +10,13 @@ This is a site where exisiting users can login to their profile and upload anima
 # Technologies Used
 ○ EJS (Embedded Javascript) <br>
 ○ HTML <br>
+○ CSS <br>
 ○ Javascript <br>
 ○ Express <br>
+○ Node.js <br>
 ○ Mongoose <br>
+○ MongoDB <br>
+○ Heroku <br>
 
 # Getting Started 
 > <a href="https://projecttwo-adoptionsite-a5dc6a51c07e.herokuapp.com/sessions/new">Link to website</a><br>
