@@ -15,8 +15,9 @@ This is a site where exisiting users can login to their profile and upload anima
 ○ Mongoose <br>
 
 # Getting Started 
-> [Link to the website](https://projecttwo-adoptionsite-a5dc6a51c07e.herokuapp.com/sessions/new)
-> <a href="https://trello.com/b/ZSAnKCV1/project-2">Link to Trello</a>
+> <a href="https://projecttwo-adoptionsite-a5dc6a51c07e.herokuapp.com/sessions/new">Link to website</a><br>
+> <a href="https://trello.com/b/ZSAnKCV1/project-2">Link to Trello</a><br>
+
 # Next Steps
 > Bring accessibility to different screens (i.e Mobile). <br>
 > Include a comments section from different users. <br>
