@@ -7,8 +7,10 @@ const postSchema = new mongoose.Schema({
     description: String, 
     trained: Boolean,
     breed: String, 
+    // #1 Source: https://dev.to/alexmercedcoder/mongodb-relationships-using-mongoose-in-nodejs-54cc (Relationship - one to many and schema)
+    // #2 Source: https://mongoosejs.com/docs/schematypes.html ("type" reference)
     author: {
-        type: mongoose.Types.ObjectId,
+        type: mongoose.Types.ObjectId, 
         ref: "User",
     }
 

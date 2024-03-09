@@ -112,6 +112,8 @@ header {
     margin: 20px; 
 } */
 
+/* Source #1: https://youtu.be/EiNiSFIPIQE?si=1yaFHI_CBXz3znjB (Grid Reference) */
+/* Source #2: https://youtu.be/9zBsdzdE4sM?si=Rka8BljOkeXezhQi (Grid Reference) */
 .container-show {
     display: grid;
     grid-template-columns: 800px 800px;
