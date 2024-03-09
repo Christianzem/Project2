@@ -5,7 +5,7 @@
     <%- include("./partials/header.ejs") %>
     <div class="container-show">
     <div class="name-show">
-        <h2><%= post.name.toUpperCase() %></h2>
+        <h2><%= post.name %></h2>
         <img src="<%= post.img %>" class="img-show"/>
     </div>
     <div class="info-show">
@@ -17,9 +17,11 @@
             <span><%= post.name %> is not trained</span>
         <% } %>
         <h2>Breed: <%= post.breed %></h2>
+
         <button class="edit"><a href="/posts/<%= post.id %>/edit" class="edit">EDIT INFO</a></button>
         <form method="POST" action="/posts/<%= post.id %>?_method=DELETE">
-            <input type="submit" value="DELETE" class="btn2"/>
+            <input type="submit" value="DELETE" class="btn2"/>            
+
         </form>
     </div>
     </div>

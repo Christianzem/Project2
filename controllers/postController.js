@@ -14,7 +14,7 @@ const newForm = (req,res) => {
 const create = async(req,res) => {
     try{
         req.body.trained = req.body.trained == "on" ? true : false
-        const newPost = await Post.create(req.body)
+        const newPost = await Post.create({...req.body, author: req.session.currentUser._id})
         res.redirect("/posts");
     }catch(err){
         console.log(err)
@@ -23,7 +23,7 @@ const create = async(req,res) => {
 
 const index = async(req,res) => {
     try{
-        const Posts = await Post.find()
+        const Posts = await Post.find({author: req.session.currentUser._id})
         res.render("index.ejs", {
             allPosts: Posts, 
             tabTitle: "Index",
@@ -41,7 +41,7 @@ const show = async(req,res) => {
         res.render("shows.ejs", {
             post, 
             tabTitle: post.name,
-            currentUser: req.session.currentUser
+            currentUser: req.session.currentUser,
         }) 
     }catch(err){
         console.log(err)
@@ -50,7 +50,7 @@ const show = async(req,res) => {
 
 const destory = async(req,res) => {
     try{
-        await Post.findByIdAndDelete(req.params.id)
+        await Post.findByIdAndDelete({_id: req.params.id, author: req.session.currentUser._id})
         res.redirect("/posts")
     }catch(err){
         console.log(err)
@@ -59,7 +59,7 @@ const destory = async(req,res) => {
 
 const edit = async(req,res) => {
     try{
-        const post = await Post.findById(req.params.id);
+        const post = await Post.findById({_id: req.params.id, author: req.session.currentUser._id});
         res.render("edit.ejs", {
             post,
             index: req.params.id,
@@ -75,7 +75,7 @@ const update = async(req,res) => {
     try{
         req.body.trained = req.body.trained == "on" ? true : false
         const index = req.params.id
-        const post = await Post.findByIdAndUpdate(index, req.body, {new:true})
+        const post = await Post.findByIdAndUpdate({_id: req.params.id, author: req.session.currentUser._id}, req.body, {new:true}, )
         res.redirect("/posts")
     }catch(err){
         console.log(err)
